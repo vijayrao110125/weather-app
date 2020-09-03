@@ -5,6 +5,7 @@ const geocode=require('./src/geocodes')
 const forecast=require('./src/forecast')
 
 const app=express()
+const port=process.env.PORT||8080
 const page=path.join(__dirname,'./public')
 const viewspath=path.join(__dirname,"./templates/views")
 const partialpath=path.join(__dirname,"./templates/partials")
@@ -71,6 +72,6 @@ app.get('*',(req,res)=>{
         errorMessage:"Page Not Found"
     })
 })
-app.listen(8080,()=>{
+app.listen(port,()=>{
     console.log("server running.....")
 })
