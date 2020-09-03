@@ -9,7 +9,7 @@ var forecast=((latitude,longitude,callback)=>{
             }else if(body.error){
                 callback('error loading data from weather server')
             }else{
-                callback(undefined,body.current.weather_descriptions+". It is "+body.current.temperature+" degrees fahrenheit. There is a "+body.current.precip+"% chance of rain.")
+                callback(undefined,body.current.weather_descriptions+". It is currently "+body.current.temperature+" degrees fahrenheit out. It feels like "+body.current.feelslike+" degrees fahrenheit. The humidity is"+body.current.humidity+"%")
             }
 })})
 
